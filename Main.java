@@ -66,6 +66,7 @@ public class Main extends JavaPlugin{
 			p.getInventory().setHelmet(new ItemStack(Material.DIAMOND_HELMET));
 			p.setMaxHealth(20);
 			p.setHealth(20);
+			p.setSaturation(20);
 			p.sendMessage(ChatColor.RED + "Recived Kit " + ChatColor.DARK_PURPLE + "Starter!");
 			
 		}
