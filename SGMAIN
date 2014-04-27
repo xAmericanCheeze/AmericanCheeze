@@ -1,0 +1,67 @@
+package me.gallantmo.main;
+
+import me.gallantmo.listeners.PlayerListeners;
+
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin{
+
+	private static Main instance;
+	
+	public void log(String string) {
+		System.out.println(string);
+	}
+		public static Main getInstance(){
+			return instance;
+		}
+		public void registerListeners(){
+			PluginManager pm = getServer().getPluginManager();
+			pm.registerEvents((Listener) new me.gallantmo.listeners.PlayerListeners(this), this);
+			
+		}
+		public void registerCommands(){
+			//Not Until Later
+		}
+		//when is enabled
+		@Override 
+		public void onEnable(){
+			getLogger().info("has been enabled successfully!");
+			instance = this;
+			registerListeners();
+			registerCommands();
+		}
+		
+		@Override
+		public void onDisable(){
+			getLogger().info("has been disabled successfully!");
+			instance = null;
+		}
+		//commands
+		
+		public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
+			//starter command
+
+			
+		}
+			
+			
+			
+			
+			return false;
+			
+			
+			
+		}
+	}
+	
+
