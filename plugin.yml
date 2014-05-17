@@ -1,7 +1,0 @@
-name: AllInOne
-main: me.gallantmo.main.Main
-version: 1.0
-description: Currently In Beta
-commands:
-  fly: 
-    description: Turn off or on fly mode.
